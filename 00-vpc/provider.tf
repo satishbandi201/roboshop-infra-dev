@@ -16,6 +16,6 @@ terraform {
 }
 
 provider "aws" {
-  # Configuration option
+  # Configuration options
   region = "us-east-1"
 }
