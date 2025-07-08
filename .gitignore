@@ -16,7 +16,7 @@ crash.log
 .tfvars
 
 # Ignore override files as they are usually used to override resources locally and so
-# are not checked in
+# are not checked 
 override.tf
 override.tf.json
 *_override.tf
