@@ -1,23 +1,23 @@
-resource "aws_ssm_parameter" "vpc_id" {
-  name  = "/${var.project}/${var.environment}/vpc_id"
+resource "aws_ssm_parameter" "frontend_sg_id" {
+  name  = "/${var.project}/${var.environment}/frontend_sg_id"
   type  = "String"
-  value = module.vpc.vpc_id
+  value = module.frontend.sg_id
 }
 
-resource "aws_ssm_parameter" "public_subnet_ids" {
-  name  = "/${var.project}/${var.environment}/public_subnet_ids"
-  type  = "StringList"
-  value = join(",", module.vpc.public_subnet_ids)
+resource "aws_ssm_parameter" "bastion_sg_id" {
+  name  = "/${var.project}/${var.environment}/bastion_sg_id"
+  type  = "String"
+  value = module.bastion.sg_id
 }
 
-resource "aws_ssm_parameter" "private_subnet_ids" {
-  name  = "/${var.project}/${var.environment}/private_subnet_ids"
-  type  = "StringList"
-  value = join(",", module.vpc.private_subnet_ids)
+resource "aws_ssm_parameter" "backend_alb_sg_id" {
+  name  = "/${var.project}/${var.environment}/backend_alb_sg_id"
+  type  = "String"
+  value = module.backend_alb.sg_id
 }
 
-resource "aws_ssm_parameter" "database_subnet_ids" {
-  name  = "/${var.project}/${var.environment}/database_subnet_ids"
-  type  = "StringList"
-  value = join(",", module.vpc.database_subnet_ids)
+resource "aws_ssm_parameter" "vpn_sg_id" {
+  name  = "/${var.project}/${var.environment}/vpn_sg_id"
+  type  = "String"
+  value = module.vpn.sg_id
 }

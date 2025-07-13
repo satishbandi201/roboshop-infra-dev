@@ -1,6 +1,6 @@
 module "frontend" {
     #source = "../../terraform-aws-securitygroup"
-    source = "https://github.com/satishbandi201/terraform-aws-securitygroup.git"
+    source = "git::https://github.com/satishbandi201/terraform-aws-securitygroup.git?ref=main"
     project = var.project
     environment = var.environment
 
@@ -11,7 +11,7 @@ module "frontend" {
 
 module "bastion" {
     #source = "../../terraform-aws-securitygroup"
-    source = "https://github.com/satishbandi201/terraform-aws-securitygroup.git"
+    source = "git::https://github.com/satishbandi201/terraform-aws-securitygroup.git?ref=main"
     project = var.project
     environment = var.environment
 
@@ -22,7 +22,7 @@ module "bastion" {
 
 module "backend_alb" {
     #source = "../../terraform-aws-securitygroup"
-    source = "https://github.com/satishbandi201/terraform-aws-securitygroup.git"
+    source = "git::https://github.com/satishbandi201/terraform-aws-securitygroup.git?ref=main"
     project = var.project
     environment = var.environment
 
@@ -33,7 +33,7 @@ module "backend_alb" {
 
 module "vpn" {
     #source = "../../terraform-aws-securitygroup"
-    source = "https://github.com/satishbandi201/terraform-aws-securitygroup.git"
+    source = "git::https://github.com/satishbandi201/terraform-aws-securitygroup.git?ref=main"
     project = var.project
     environment = var.environment
 
