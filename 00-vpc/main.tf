@@ -1,5 +1,5 @@
 module "vpc" {
-    source = "git::https://github.com/satishbandi201/taws-vpc.git?ref=main"
+    source = "git::https://github.com/daws-84s/terraform-aws-vpc.git?ref=main"
     project = var.project
     environment = var.environment
     public_subnet_cidrs = var.public_subnet_cidrs
@@ -9,3 +9,7 @@ module "vpc" {
     is_peering_required = true
 
 }
+
+/* output "vpc_ids" {
+    value = module.vpc.public_subnet_ids
+} */
